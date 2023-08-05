@@ -17,7 +17,7 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="min-h-screen">
+	<body>
 		<Header />
 		<main class="max-w-xl sm:px-0 px-6 mx-auto w-max">
 			<ul class="space-y-16">
@@ -35,7 +35,7 @@ const posts = (await getCollection('blog')).sort(
 								<aside class="flex gap-x-2 text-sm sm:text-base justify-center sm:justify-start">
 									<FormattedDate date={post.data.pubDate}/>
 									&bullet;
-									<div class="whitespace-nowrap">☕ {getReadingTime(post.body).text}</div>
+									<div class="whitespace-nowrap">☕ {post.render().then((p) => p.remarkPluginFrontmatter.minutesRead)}</div>
 								</aside>
 							</div>
 						</li>
