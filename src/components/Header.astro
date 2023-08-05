@@ -1,16 +1,28 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import Logo from "./Logo.astro";
 ---
 
-<header>
-	<nav class="flex justify-between flex-1">
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="https://www.yuuns.tech">About</HeaderLink>
-		</div>
-		<div/>
+<header class="max-w-2xl mx-auto flex flex-col sm:flex-row justify-between items-center mt-8 mb-16">
+	<div class="flex items-center gap-x-2">
+		<a href="/"><Logo class="w-12 h-12 fill-primary-500"/></a>
+		<h2 class="text-primary-500">
+			<a href="/" class="text-2xl font-bold transition-colors">Personal Blog</a>
+			<br/>
+			<span class="text-base">
+			by
+			<a
+				href="https://www.yuuns.tech"
+				rel="noopener noreferrer"
+				target="_blank"
+				class="underline transition-colors">
+					Yunus Emre Kepenek
+			</a>
+		</span>
+		</h2>
+	</div>
+	<nav class="space-x-9 text-primary-500 hidden sm:flex">
+		<a href="https://www.yuuns.tech" class="py-2 px-4 rounded-lg hover:bg-gray-200 active:bg-gray-300 transition-colors">
+			About me
+		</a>
 	</nav>
 </header>
