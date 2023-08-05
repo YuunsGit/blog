@@ -35,7 +35,7 @@ const posts = (await getCollection('blog')).sort(
 								<aside class="flex gap-x-2 text-sm sm:text-base justify-center sm:justify-start">
 									<FormattedDate date={post.data.pubDate}/>
 									&bullet;
-									<div class="whitespace-nowrap">☕ {post.render().then((p) => p.remarkPluginFrontmatter.minutesRead)}</div>
+									<div class="whitespace-nowrap">☕ {post.render().then((p) => p.remarkPluginFrontmatter?.minutesRead)}</div>
 								</aside>
 							</div>
 						</li>
