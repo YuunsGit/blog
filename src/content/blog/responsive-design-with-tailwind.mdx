@@ -13,7 +13,7 @@ In this blog post, we will explore how to achieve responsive design using Tailwi
 
 Responsive design is an approach to web design that allows web applications adjusting their layout and content automatically based on the user's device and screen size, providing an optimal viewing experience across various devices.
 
-![image](/images/responsive-deisgn-ughh.jpg)
+![image](/images/responsive-design-ughh.jpg)
 
 Responsive design is becoming more and more challenging to achieve due to diverse device types. I mean, just look at those folding screens. It's getting complicated.
 
@@ -56,8 +56,9 @@ That means if mobile devices are targeted, you need to start styling without any
 ## Custom responsive layouts
 
 <div className="relative flex items-center justify-center h-96 border-2 rounded-lg resize-x overflow-auto w-full max-w-full min-w-[302px] bg-[url('/images/dot-pattern.svg')] bg-repeatbg-[length:50px]">
-    <iframe src="/examples/responsive.html" className="h-full w-full my-auto"/>
-    <p className="absolute -bottom-3 right-2 font-bold text-base px-2 py-1 border-2 rounded bg-white">Resize here &#8600;</p>
+    <div className="absolute w-full h-full bg-gradient-to-tl from-white to-transparent from-10%"/>
+    <iframe src="/examples/responsive.html" className="z-10 h-full w-full my-auto"/>
+    <p className="absolute -bottom-3 right-2 text-base px-2 py-1 border rounded bg-white hidden sm:block">Resize here &#8600;</p>
 </div>
 
 We added the breakpoint `sm:` to make the card above responsive. And here is how it works:
