@@ -2,25 +2,25 @@
 import Logo from "./Logo.astro";
 ---
 
-<header class="max-w-2xl mx-auto flex flex-col sm:flex-row justify-between items-center mt-8 mb-16">
+<header class="max-w-2xl w-full mx-auto flex flex-col sm:flex-row justify-between items-center pt-8 pb-16">
 	<div class="flex items-center gap-x-2">
-		<a href="/"><Logo class="w-12 h-12 fill-primary-500"/></a>
-		<h2 class="text-primary-500">
+		<a href="/"><Logo class="w-12 h-12 fill-primary-500 hover:scale-105 transition-all"/></a>
+		<h1 class="text-primary-500 leading-3">
 			<a href="/" class="text-2xl font-bold transition-colors">Personal Blog</a>
 			<br/>
 			<span class="text-base">
-			by
-			<a
-				href="https://www.yuuns.tech"
-				rel="noopener noreferrer"
-				target="_blank"
-				class="underline transition-colors">
-					Yunus Emre Kepenek
-			</a>
-		</span>
-		</h2>
+				by
+				<a
+					href="https://www.yuuns.tech"
+					rel="noopener noreferrer"
+					target="_blank"
+					class="underline transition-colors">
+						Yunus Emre Kepenek
+				</a>
+			</span>
+		</h1>
 	</div>
-	<nav class="space-x-9 text-primary-500 hidden sm:flex">
+	<nav class="text-primary-500 text-base hidden sm:block">
 		<a href="https://www.yuuns.tech" class="py-2 px-4 rounded-lg hover:bg-gray-200 active:bg-gray-300 transition-colors">
 			About me
 		</a>

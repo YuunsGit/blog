@@ -4,7 +4,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import {render} from "astro/dist/runtime/server";
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -13,7 +12,7 @@ const { title, description, pubDate, heroImage, readingTime } = Astro.props;
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={heroImage} />
 	</head>
 
 	<body>
@@ -21,18 +20,18 @@ const { title, description, pubDate, heroImage, readingTime } = Astro.props;
 		<main class="max-w-2xl mx-auto px-4 sm:px-0">
 			<article>
 				<div>
-					{heroImage && <img src={heroImage} alt="" class="rounded-xl w-min shadow-2xl" />}
+					{heroImage && <img src={heroImage} alt="" class="rounded-xl shadow-lg shadow-primary-400" />}
 				</div>
 				<div class="prose mx-auto pt-16">
 					<div class="text-center sm:text-left">
-						<h1>{title}</h1>
+						<h1 class="text-primary-500 mb-4">{title}</h1>
 						<aside class="flex gap-x-2 text-base justify-center sm:justify-start">
 							<FormattedDate date={pubDate}/>
 							&bullet;
 							<div class="whitespace-nowrap">☕ {readingTime?.minutesRead}</div>
 						</aside>
-						<hr />
 					</div>
+					<hr class="my-12" />
 					<slot />
 				</div>
 			</article>
@@ -40,3 +39,11 @@ const { title, description, pubDate, heroImage, readingTime } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<style>
+	img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
+</style>
