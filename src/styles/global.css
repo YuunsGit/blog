@@ -106,6 +106,14 @@ pre {
 	border-radius: 8px;
 }
 
+@media screen and (min-width: 700px) {
+	pre {
+		width: 110%;
+		position: relative;
+		left: -5%;
+	}
+}
+
 pre > code {
 	all: unset;
 }
