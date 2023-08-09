@@ -1,2 +1,2 @@
 export const SITE_TITLE = 'Personal Blog by Yunus Emre Kepenek';
-export const SITE_DESCRIPTION = 'Welcome to my personal thumbnails.';
+export const SITE_DESCRIPTION = 'My personal blog where I post regularly.';
