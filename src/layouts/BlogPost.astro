@@ -21,7 +21,7 @@ const { title, description, pubDate, heroImage, readingTime } = Astro.props;
 		<main class="max-w-2xl mx-auto px-4 sm:px-0">
 			<article>
 				<div>
-					{heroImage && <Image src={heroImage} alt={title} width={800} height={450} aspectRatio="16:9"
+					{heroImage && <Image src={heroImage} alt={title} width={800} height={450} aspectRatio="16:9" loading="eager"
 										 class="rounded-xl shadow-lg shadow-primary-400" />}
 				</div>
 				<div class="prose mx-auto pt-16">
