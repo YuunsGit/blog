@@ -1,10 +1,17 @@
 ---
+import { Image } from "astro:assets";
+import rss from "../assets/rss.svg";
+import linkedin from "../assets/linkedin.svg";
+import github from "../assets/github.svg";
+import me from "../assets/yunus-emre.jpeg";
+
 const today = new Date();
 ---
 
 <footer class="max-w-2xl px-4 sm:px-0 flex flex-col sm:flex-row gap-y-4 items-center justify-between mx-auto mb-8 pt-16 mt-auto self-end w-full">
 	<div class="flex gap-x-4 items-center py-2 px-4 rounded-lg transition-colors mx-auto sm:mx-0 text-primary-500">
-		<img src="/Me.jpeg" alt="Yunus Emre Kepenek" class="rounded-full w-16 h-16"/>
+		<Image src={me} alt="Yunus Emre Kepenek" width={64} height={64} aspectRatio="1:1"
+			   class="rounded-full w-16 h-16" />
 		<div class="flex flex-col">
 			<span class="font-medium text-xl">Yunus Emre Kepenek</span>
 			<a href="https://www.yuuns.tech" target="_blank" rel="noreferrer noopener" class=" text-base flex gap-x-1 hover:gap-x-2 transition-all items-center font-light">
@@ -15,13 +22,16 @@ const today = new Date();
 	</div>
 	<div class="gap-x-4 flex">
 		<a href="https://github.com/yuunsgit" target="_blank" rel="noreferrer noopener">
-			<img src="/GitHub.svg" alt="GitHub" class="h-6 w-6 hover:rotate-6 rounded-none grayscale hover:grayscale-0 transition-all">
+			<Image src={github} alt="GitHub" width={24} height={24} aspectRatio="1:1"
+				   class="h-6 w-6 hover:rotate-6 rounded-none grayscale hover:grayscale-0 transition-all" />
 		</a>
 		<a href="https://www.linkedin.com/in/yekepenek/" target="_blank" rel="noreferrer noopener">
-			<img src="/LinkedIn.svg" alt="LinkedIn" class="h-6 w-6 hover:rotate-6 rounded-none grayscale hover:grayscale-0 transition-all">
+			<Image src={linkedin} alt="LinkedIn" width={24} height={24} aspectRatio="1:1"
+				   class="h-6 w-6 hover:rotate-6 rounded-none grayscale hover:grayscale-0 transition-all" />
 		</a>
 		<a href="/rss.xml" target="_blank" rel="noreferrer noopener">
-			<img src="/Rss.svg" alt="RSS" class="h-6 w-6 hover:rotate-6 rounded-none grayscale hover:grayscale-0 transition-all">
+			<Image src={rss} alt="RSS Feed" width={24} height={24} aspectRatio="1:1"
+				   class="h-6 w-6 hover:rotate-6 rounded-none grayscale hover:grayscale-0 transition-all" />
 		</a>
 	</div>
 </footer>

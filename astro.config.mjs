@@ -16,5 +16,8 @@ export default defineConfig({
   output: "static",
   adapter: vercel({
     analytics: true,
-  })
+  }),
+  experimental: {
+    assets: true
+  }
 });

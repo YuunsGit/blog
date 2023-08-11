@@ -2,7 +2,7 @@
 title: 'Responsive Design with Tailwind'
 description: 'Using responsive utility variants to build adaptive user interfaces.'
 pubDate: 'Aug 06 2023'
-heroImage: '/thumbnails/responsive-design-with-tailwind.jpg'
+heroImage: '../../assets/thumbnails/responsive-design-with-tailwind.jpg'
 ---
 
 Responsive web design is essential in today's web applications as it ensures that they adapt to different screen sizes and devices, providing an optimal user experience.
@@ -13,7 +13,7 @@ In this blog post, we will explore how to achieve responsive design using Tailwi
 
 Responsive design is an approach to web design that allows web applications adjusting their layout and content automatically based on the user's device and screen size, providing an optimal viewing experience across various devices.
 
-![Responsive Design Ughh](/images/responsive-design-ughh.jpg)
+![Responsive Design Ughh](../../assets/images/responsive-design-ughh.jpg)
 
 Responsive design is becoming more and more challenging to achieve due to diverse device types. *I mean, just look at those folding screens. It's getting complicated.*
 
@@ -43,7 +43,7 @@ Simply prefix the utility with the breakpoint name, followed by the `:` characte
 
 By default, Tailwind uses a mobile-first approach for its breakpoint system, much like what you may be familiar with in other frameworks such as Bootstrap.
 
-![Mobile First](/images/mobile-first.jpg)
+![Mobile First](../../assets/images/mobile-first.jpg)
 
 That means if mobile devices are targeted, you need to start styling without any prefix, not the `sm:` prefixed version. Any unprefixed utility take effect on all screen sizes.
 
@@ -55,7 +55,7 @@ That means if mobile devices are targeted, you need to start styling without any
 
 ## Custom responsive layouts
 
-<div className="relative flex items-center justify-center h-96 border-2 rounded-lg resize-x overflow-auto w-full max-w-full min-w-[302px] bg-[url('/images/dot-pattern.svg')] bg-repeatbg-[length:50px]">
+<div className="relative flex items-center justify-center h-96 border-2 rounded-lg resize-x overflow-auto w-full max-w-full min-w-[302px] bg-[url('/examples/dot-pattern.svg')] bg-repeatbg-[length:50px]">
     <div className="absolute w-full h-full bg-gradient-to-tl from-white to-transparent from-10%"/>
     <iframe src="/examples/responsive.html" className="z-10 h-full w-full my-auto"/>
     <p className="absolute -bottom-3 right-2 text-base px-2 py-1 border rounded bg-white hidden sm:block">Resize here &#8600;</p>
@@ -69,7 +69,7 @@ We added the breakpoint `sm:` to make the card above responsive. And here is how
 
 ```html
 <div class="flex flex-col sm:flex-row items-center gap-8 border-2 rounded-lg p-4 bg-white shadow-xl">
-    <img src="/images/lake.png" class="h-28 sm:h-40 rounded-lg" alt="Lake" />
+    <img src="./lake.png" class="h-28 sm:h-40 rounded-lg" alt="Lake" />
     <p>
         A lake is a body of water that is surrounded by land.
         There are millions of lakes in the world.
