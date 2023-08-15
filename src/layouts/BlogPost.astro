@@ -1,7 +1,7 @@
 ---
 import {Image} from "astro:assets";
-import { ViewTransitions } from 'astro:transitions';
-import type { CollectionEntry } from 'astro:content';
+import {ViewTransitions} from 'astro:transitions';
+import type {CollectionEntry} from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -9,51 +9,53 @@ import Footer from '../components/Footer.astro';
 
 type Props = CollectionEntry<'thumbnails'>['data'];
 
-const { title, description, pubDate, heroImage, readingTime, slug } = Astro.props;
+const {title, description, pubDate, heroImage, readingTime, slug} = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} image={heroImage} />
-		<ViewTransitions />
-	</head>
+<head>
+    <BaseHead title={title} description={description} image={heroImage}/>
+    <ViewTransitions/>
+</head>
 
-	<body>
-		<Header />
-		<main class="max-w-2xl mx-auto px-4 sm:px-0">
-			<article>
-				<div>
-					{heroImage && <Image src={heroImage}
-										 alt={title}
-										 width={800} height={450}
-										 aspectRatio="16:9"
-										 loading="eager"
-										 decoding="sync"
-										 transition:name={slug}
-										 class="rounded-xl shadow-lg shadow-primary-400" />}
-				</div>
-				<div class="prose mx-auto pt-16">
-					<div class="text-center sm:text-left">
-						<h1 class="text-primary-500 mb-4">{title}</h1>
-						<aside class="flex gap-x-2 text-base justify-center sm:justify-start">
-							<FormattedDate date={pubDate}/>
-							&bullet;
-							<div class="whitespace-nowrap">☕ {readingTime?.minutesRead}</div>
-						</aside>
-					</div>
-					<hr class="my-12" />
-					<slot />
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
+<body>
+<Header/>
+<main class="max-w-2xl mx-auto px-4 sm:px-0">
+    <article>
+        <div>
+            {heroImage &&
+                    <Image src={heroImage}
+                           alt={title}
+                           width={800} height={450}
+                           aspectRatio="16:9"
+                           loading="eager"
+                           decoding="sync"
+                           transition:name={slug}
+                           class="rounded-xl shadow-lg shadow-primary-400"/>
+            }
+        </div>
+        <div class="prose mx-auto pt-16">
+            <div class="text-center sm:text-left">
+                <h1 class="text-primary-500 mb-4">{title}</h1>
+                <aside class="flex gap-x-2 text-base justify-center sm:justify-start">
+                    <FormattedDate date={pubDate}/>
+                    &bullet;
+                    <div class="whitespace-nowrap">☕ {readingTime?.minutesRead}</div>
+                </aside>
+            </div>
+            <hr class="my-12"/>
+            <slot/>
+        </div>
+    </article>
+</main>
+<Footer/>
+</body>
 </html>
 
 <style>
-	img {
-		max-width: 100%;
-		height: auto;
-		border-radius: 8px;
-	}
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 </style>
