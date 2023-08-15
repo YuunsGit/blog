@@ -17,7 +17,8 @@ export default defineConfig({
     analytics: true,
   }),
   experimental: {
-    assets: true
+    assets: true,
+    viewTransitions: true
   },
   image: {
     service: sharpImageService()

@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { ViewTransitions } from 'astro:transitions';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -16,6 +17,7 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<ViewTransitions />
 	</head>
 	<body class="min-h-screen flex flex-col">
 		<Header />
@@ -35,6 +37,7 @@ const posts = (await getCollection('blog')).sort(
 										   aspectRatio="16:9"
 										   loading="eager"
 										   decoding="sync"
+										   transition:name={post.slug}
 										   class="shadow-md shadow-primary-400 rounded-lg aspect-video" />
 								</a>
 								<div class="sm:w-3/4 flex flex-col gap-y-2">
