@@ -27,9 +27,8 @@ const {title, description, pubDate, heroImage, readingTime, slug} = Astro.props;
                     <Image src={heroImage}
                            alt={title}
                            width={800} height={450}
+                           quality="high"
                            aspectRatio="16:9"
-                           loading="eager"
-                           decoding="sync"
                            transition:name={slug}
                            class="rounded-xl shadow-lg shadow-primary-400"/>
             }

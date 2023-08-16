@@ -35,8 +35,6 @@ const posts = (await getCollection('blog')).sort(
 										   alt={post.data.title}
 										   width={400} height={225}
 										   aspectRatio="16:9"
-										   loading="eager"
-										   decoding="sync"
 										   transition:name={post.slug}
 										   class="shadow-md shadow-primary-400 rounded-lg aspect-video" />
 								</a>
