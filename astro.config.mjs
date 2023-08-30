@@ -16,10 +16,6 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
-  experimental: {
-    assets: true,
-    viewTransitions: true
-  },
   image: {
     service: sharpImageService()
   }
