@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://blog.yuuns.tech" target="_blank"><img alt="Logo" src="public/logo.svg" width="150" /></a>
+<a href="https://blog.yunusemre.dev" target="_blank"><img alt="Logo" src="public/logo.svg" width="150" /></a>
 </div>
 <h1 align="center">
   Personal Blog
@@ -7,7 +7,7 @@
 <p align="center">
   My personal blog where I post regularly.
 <br/>
-  <a href="https://blog.yuuns.tech" target="_blank">blog.yuuns.tech</a>
+  <a href="https://blog.yunusemre.dev" target="_blank">blog.yunusemre.dev</a>
 </p>
 <br/>
 <h1 align="center">

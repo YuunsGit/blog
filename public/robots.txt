@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.yuuns.tech/sitemap-index.xml
+Sitemap: https://blog.yunusemre.dev/sitemap-index.xml
