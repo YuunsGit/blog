@@ -7,7 +7,7 @@ import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://blog.yuuns.tech",
+  site: "https://blog.yunusemre.dev",
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     remarkPlugins: [remarkReadingTime]
@@ -16,10 +16,6 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
-  experimental: {
-    assets: true,
-    viewTransitions: true
-  },
   image: {
     service: sharpImageService()
   }
