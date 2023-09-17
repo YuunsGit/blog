@@ -25,7 +25,7 @@ const posts = (await getCollection('blog')).sort(
 			<ul class="space-y-12">
 				{
 					posts.map((post) => (
-						<li class="group flex flex-col gap-y-4 text-center sm:text-left gap-x-4">
+						<li class="relative group flex flex-col gap-y-4 text-center sm:text-left gap-x-4 before:absolute before:-z-10 before:w-full before:h-full before:rounded-xl hover:before:scale-y-125 before:transition-all hover:before:scale-x-110 hover:before:opacity-5 before:shadow before:opacity-0 before:bg-primary-500">
 							<a href={`/${post.slug}/`} class="hidden sm:inline">
 								<h2 class="font-bold text-2xl sm:text-3xl text-primary-500 group-hover:text-primary-400 transition-colors">{post.data.title}</h2>
 							</a>
