@@ -5,7 +5,7 @@
   Personal Blog
 </h1>
 <p align="center">
-  My personal blog where I post regularly.
+  My personal blog where I post <del>regularly</del> rarely.
 <br/>
   <a href="https://blog.yunusemre.dev" target="_blank">blog.yunusemre.dev</a>
 </p>
